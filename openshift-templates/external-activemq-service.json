@@ -1,0 +1,24 @@
+{
+  "kind": "Service",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "external-activemq-service",
+    "labels": {
+      "application": "openshift-hello-nodejs",
+      "type": "external"
+    }
+  },
+  "spec": {
+    "ports": [
+      {
+        "name": "activemq",
+        "protocol": "TCP",
+        "port": 61616,
+        "targetPort": 61616,
+        "nodePort": 0
+      }
+    ]
+  },
+  "selector": {
+  }
+}
