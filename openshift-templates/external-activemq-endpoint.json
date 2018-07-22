@@ -1,0 +1,26 @@
+{
+  "kind": "Endpoints",
+  "apiVersion": "v1",
+  "metadata": {
+    "name": "external-activemq-service",
+    "labels": {
+      "application": "openshift-hello-nodejs",
+      "type": "external"
+    }
+  },
+  "subsets": [
+    {
+      "addresses": [
+        {
+          "ip": "25.255.255.25"
+        }
+      ],
+      "ports": [
+        {
+          "port": 61616,
+          "name": "activemq"
+        }
+      ]
+    }
+  ]
+}
