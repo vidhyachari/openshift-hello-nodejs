@@ -1,0 +1,15 @@
+{
+  "apiVersion": "v1",
+  "kind": "ConfigMap",
+  "metadata": {
+    "name": "configmap-activemq",
+    "labels": {
+      "application": "openshift-hello-nodejs"
+    }
+  },
+  "data": {
+    "activemqTopic": "VirtualTopic.HelloWorld",
+    "activemqPort": "61616",
+    "activemqUrl": "tcp://external-activemq-service"
+  }
+}
